@@ -24,5 +24,5 @@ for i in range (m):
     for i in range (n):
         a.append(int(input()))
     lst.append(a)
-print(lst)
+
 spiralPrint(m,n,lst)
