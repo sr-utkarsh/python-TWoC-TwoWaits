@@ -1,30 +1,15 @@
-n=input("Enter the no.: ")
-arr=list(n)
+n=int(input("Enter the size of list: "))
+lst=[]
+print("Enter the elements: ")
+for i in range (n):
+    el=int(input())
+    lst.append(el)
+lst.sort()
+i=0
+while(i==lst[i]):
+    i+=1
+    if(i==n):
+        break
+print(i)
 
-l=len(arr)
 
-x=arr[l-1]
-
-i=l-2
-
-while(arr[i]>x):
-    i-=1
-
-if(i==-1):
-    print(arr)
-    strings = [str(i) for i in arr]
-    print(int("".join(strings)))
-else:
-    
-    arr[l-1]=arr[i]
-    arr[i]=x
-    l1=arr[:i+1]
-    
-    l2=arr[i+1:]
-    
-    l2.sort()
-    
-    strings = [str(i) for i in l1+l2]
-    print(int("".join(strings)))
-    
-    
