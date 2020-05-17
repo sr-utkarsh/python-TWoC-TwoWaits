@@ -1,25 +1,30 @@
-n=int(input("Enter the size of list: "))
-lst=[]
-print("Enter the elements: ")
-for i in range (n):
-    el=int(input())
-    lst.append(el)
-x=sum(lst)
-fibo=set()
-prev , curr = 0, 1
-fibo.add(prev) 
-fibo.add(curr) 
-while (curr <= x): 
-    temp = curr + prev 
-    if temp <= x: 
-        fibo.add(temp) 
-    prev = curr 
-    curr = temp
-sum = 0
-for i in range( n ): 
-        if (lst[i] in fibo): 
-            sum += lst[i] 
-if (sum in fibo): 
-    print("Sum of fibonaaci elements is a fibonacci element")
+n=input("Enter the no.: ")
+arr=list(n)
+
+l=len(arr)
+
+x=arr[l-1]
+
+i=l-2
+
+while(arr[i]>x):
+    i-=1
+
+if(i==-1):
+    print(arr)
+    strings = [str(i) for i in arr]
+    print(int("".join(strings)))
 else:
-    print("Sum of fibonaaci elements is not a fibonacci element")
+    
+    arr[l-1]=arr[i]
+    arr[i]=x
+    l1=arr[:i+1]
+    
+    l2=arr[i+1:]
+    
+    l2.sort()
+    
+    strings = [str(i) for i in l1+l2]
+    print(int("".join(strings)))
+    
+    
